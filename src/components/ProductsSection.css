@@ -1,0 +1,40 @@
+/* ProductsSection.css */
+
+.products-section {
+    min-height: 49px;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-family: Gilroy;
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, 0fr)); /* Автоматическое распределение карточек по контейнеру */
+    gap: 28px;
+  }
+
+  .ant-card-body {
+    padding: 0 !important; /* Установка внутреннего отступа в 0 */
+  }
+
+  .ant-card-bordered {
+    border: none; /* Убираем обводку */
+  }
+
+  .button-container {
+    margin-left: auto;
+  }
+  

@@ -1,0 +1,86 @@
+.topic-page {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.topic-page .topic-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.topic-category {
+    background-color: #1890ff;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.topic-author {
+    font-size: 12px;
+    color:#ffffff;
+    padding: 0;
+}
+
+.topic-page .topic-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.message-container {
+    background-color: #001529;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.messages {
+    margin-top: 20px;
+}
+
+.user-message,
+.message,
+.date-message {
+    margin-bottom: 4px;
+}
+
+.user-message {
+    font-size: 12px;
+    font-weight: bold;
+    color:#ffffff;
+    padding: 0;
+}
+
+.message {
+    font-size: 16px;
+}
+
+.date-message {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.send-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.button-send {
+    margin-left: 16px;
+}
+  

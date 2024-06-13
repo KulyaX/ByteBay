@@ -1,0 +1,37 @@
+.ant-modal {
+    width: 448px !important;
+}
+
+.ant-modal-content {
+    background-color: #001529 !important;
+}
+
+.ant-modal-close {
+    color: #1677FF !important;
+}
+
+.input-container {
+    width: 400px;
+    padding: 24px 0;
+}
+
+.input-field {
+    margin-bottom: 24px;
+}
+
+.modal-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.button-signin,
+.button-signup {
+    margin-right: 12px;
+}
+
+.button-toggle {
+    color: #1677FF;
+    padding: 0;
+}

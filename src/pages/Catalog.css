@@ -1,0 +1,98 @@
+.page-header {
+    margin-bottom: 40px;
+  }
+  
+  .page-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .catalog-container {
+    display: grid;
+    grid-template-columns: 256px auto; /* Ширина меню 256px, остальное пространство заполнится блоком с товарами */
+    gap: 20px; /* Расстояние между блоками */
+  }
+  
+  .menu-inline-container {
+    width: 256px;
+  }
+  
+  .menu-inline {
+    border-radius: 8px;
+    height: 100%;
+    text-align: left;
+  }
+  
+  .button-sell {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px 0 24px; /* Отступы по умолчанию для элементов меню */
+    margin: 4px;
+    width: 248px;
+  }
+  
+  .product-list-container {
+    background-color: #001529; /* Цвет фона блока */
+    padding: 24px; /* Отступы внутри блока */
+    border-radius: 8px;
+  }
+
+  .search-filter-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .search-input {
+    height: 40px;
+    width: 100%;
+  }
+  
+  .search-button,
+  .filter-button {
+    margin-left: 16px; /* Расстояние между кнопками */
+    flex-shrink: 0;
+  }
+
+  .filters-container {
+    border: 2px solid #1677FF;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row; /* Выравниваем элементы в строчку */
+  }
+  
+  .filter {
+    margin-right: 16px; /* Расстояние между фильтрами */
+    text-align: left;
+    width: 160px;
+  }
+  
+  .filter-title {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .price-input,
+  .select {
+    margin-top: 12px;
+  }
+
+  .product-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px; /* Расстояние между карточками товаров */
+  }
+
+  .product-cards-container .products-card {
+    border: 1px solid #1677FF;
+  }
+

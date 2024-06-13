@@ -1,0 +1,209 @@
+.product-page {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .product-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  
+  .product-metadata {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .metadata-item {
+    margin-right: 20px;
+    font-size: 12px;
+    color:#ffffff;
+    padding: 0;
+  }
+  
+  .product-content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .product-info-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .license-block {
+    width: 414px;
+    max-height: 476px;
+    margin-left: 20px;
+    background-color: #001529;
+    border-radius: 8px;
+    padding: 0 20px 20px 20px;
+    text-align: left;
+  }
+
+  .license-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  
+  .license-description {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 16px 0;
+    line-height: 1.5;
+  }
+
+  .product-carousel {
+    width: 706px;
+    height: 476px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .product-img {
+    width: 706px;
+    height: 476px;
+    object-fit: cover;
+  }
+
+  .ant-carousel .slick-prev {
+    inset-inline-start: 25px;
+    z-index: 1;
+    color: #1677FF;
+    font-size: 24px;
+  }
+
+  .ant-carousel .slick-prev:hover {
+    color: rgba(22, 119, 255, 0.5);
+  }
+
+  .ant-carousel .slick-next {
+    inset-inline-end: 25px;
+    z-index: 1;
+    color: #1677FF;
+    font-size: 24px;
+  }
+
+  .ant-carousel .slick-next:hover {
+    color: rgba(22, 119, 255, 0.5);
+  }
+
+  .ant-carousel .slick-prev:focus {
+    color: #1677FF;
+  }
+  
+  .ant-carousel .slick-next:focus {
+    color: #1677FF;
+  }
+  
+  .buy-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .buy-button .ant-btn {
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+  
+  .price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: auto;
+  }
+  
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #001529;
+    padding: 16px;
+    padding-bottom: 0;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+  
+
+  .block-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  
+  .subblock {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+  }
+  
+  .subblock-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: 20px;
+  }
+  
+  .subblock h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  
+  .subblock p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .reviews-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #001529;
+    padding: 16px;
+    padding-bottom: 0;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+
+  .reviews {
+    margin-bottom: 20px;
+  }
+
+  .rating .ant-rate-star:not(.ant-rate-star-full) .ant-rate-star-second,
+  .rating .ant-rate-star:not(.ant-rate-star-full) .ant-rate-star-first {
+    color: rgba(255, 255, 255, 0.3); /* Цвет звездочек в неактивном состоянии */
+  }
+  
+  
+

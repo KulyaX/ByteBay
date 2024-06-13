@@ -1,0 +1,26 @@
+.ant-modal {
+    width: 448px !important;
+    color: #ffffff;
+}
+
+.ant-modal-content {
+    background-color: #001529 !important;
+}
+
+.ant-modal-close {
+    color: #1677FF !important;
+}
+
+.modal-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.modal-text {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+}

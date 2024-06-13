@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #000C17;
 }
 
 .App-logo {
@@ -36,3 +37,19 @@
     transform: rotate(360deg);
   }
 }
+
+/* Общий стиль для всех страниц */
+.page-container {
+  max-width: 1180px; /* Максимальная ширина для адаптивности */
+  margin: 0 auto; /* Центрирование контента */
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 0 20px; /* Отступы с обеих сторон */
+  min-height: 100vh;
+
+  /* Медиа-запрос для разрешения 1920px */
+  @media (min-width: 1920px) {
+    padding: 0 calc((100vw - 1920px) / 2); /* Расчетные отступы для разрешения 1920px */
+  }
+}
+

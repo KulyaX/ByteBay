@@ -1,0 +1,48 @@
+.products-card {
+    width: 274px;
+    height: 342px;
+    background-color: #001529;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+  }
+
+  .products-card-content {
+    padding: 16px;
+  }
+  
+  .products-card-title {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    color: #ffffff;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Позволяет тексту переноситься на следующую строку */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Ограничивает отображение текста двумя строками */
+    -webkit-box-orient: vertical;
+  }
+
+  .products-card-price {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #ffffff;
+    margin: 8px 0 8px 0;
+  }
+  
+  .products-card-metadata {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .products-card-cover {
+    height: 172px;
+    width: 100%;
+  }

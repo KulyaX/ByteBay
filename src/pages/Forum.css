@@ -1,0 +1,96 @@
+.page-header {
+    margin-bottom: 40px;
+  }
+  
+  .page-title {
+    font-family: Gilroy;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .forum-container {
+    display: grid;
+    grid-template-columns: 256px auto; /* Ширина меню 256px, остальное пространство заполнится блоком с товарами */
+    gap: 20px; /* Расстояние между блоками */
+  }
+  
+  .menu-inline-container {
+    width: 256px;
+  }
+  
+  .menu-inline {
+    border-radius: 8px;
+    height: 100%;
+    text-align: left;
+  }
+  
+  .button-create-topic {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px 0 24px; /* Отступы по умолчанию для элементов меню */
+    margin: 4px;
+    width: 248px;
+  }
+  
+  .topic-list-container {
+    background-color: #001529; /* Цвет фона блока */
+    padding: 24px; /* Отступы внутри блока */
+    border-radius: 8px;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .search-input {
+    height: 40px;
+    width: 100%;
+  }
+
+  .topic-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .topic-card {
+    color: #ffffff;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .topic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .topic-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .topic-category {
+    background-color: #1890ff;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .topic-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+

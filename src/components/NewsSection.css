@@ -1,0 +1,71 @@
+/* NewsSection.css */
+
+.news-section {
+    min-height: 49px;
+    margin: 60px 0 60px 0;
+  }
+  
+  .section-title {
+    font-family: Gilroy;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, 0fr)); /* Автоматическое распределение карточек по контейнеру */
+    gap: 28px;
+  }
+
+  .ant-card-body {
+    padding: 0 !important; /* Установка внутреннего отступа в 0 */
+  }
+
+  .ant-card-bordered {
+    border: none; /* Убираем обводку */
+  }
+
+  .news-card {
+    width: 274px;
+    height: 282px;
+    background-color: #001529;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+  }
+
+  .news-card-content {
+    padding: 16px;
+  }
+  
+  .news-card-title {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    color: #ffffff;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Позволяет тексту переноситься на следующую строку */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Ограничивает отображение текста двумя строками */
+    -webkit-box-orient: vertical;
+  }
+  
+  .news-card-metadata {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .show-more-container {
+    margin-top: 20px;
+  }
+  

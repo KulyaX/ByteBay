@@ -1,0 +1,32 @@
+.modal-subtitle {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.comment-section {
+    margin-top: 16px;
+}
+
+.button-comment {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.set-rating .ant-rate {
+    font-size: 32px; /* Увеличиваем размер звездочек */
+    margin-bottom: 12px;
+  }
+  
+  .set-rating .ant-rate-star:not(.ant-rate-star-full) .ant-rate-star-second,
+  .set-rating .ant-rate-star:not(.ant-rate-star-full) .ant-rate-star-first {
+    color: rgba(255, 255, 255, 0.3); /* Цвет звездочек в неактивном состоянии */
+  }
+  
+  .set-rating .ant-rate-star-first,
+  .set-rating .ant-rate-star-second {
+    color: #faad14; /* Цвет звездочек в активном состоянии */
+  }
+

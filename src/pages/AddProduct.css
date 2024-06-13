@@ -1,0 +1,82 @@
+.add-product-page {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .add-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  
+  .form-container {
+    width: 100%;
+    background-color: #001529;
+    padding: 20px 16px;
+    margin-top: 20px;
+    box-sizing: border-box;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .input-field, .select-field {
+    margin-bottom: 20px;
+  }
+  
+  .info-icon {
+    margin-left: 10px;
+  }
+  
+  .label {
+    margin-bottom: 8px;
+  }
+
+  .price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .price-container .input-field{
+    width: 300px;
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+
+  .price-container .form-field{
+    margin-top: 20px;
+  }
+
+  .price-container .publication-button {
+    width: 300px;
+    margin-top: auto;
+  }
+
+  .button-upload {
+    color: #ffffff;
+  }
+
+  .method-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .method-container .select-field {
+    width: 300px;
+  }
+  
+  .method-container .input-field {
+    flex-grow: 1;
+    width: auto;
+  }
+  

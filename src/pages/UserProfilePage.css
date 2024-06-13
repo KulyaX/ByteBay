@@ -1,0 +1,60 @@
+.page-header {
+    margin-bottom: 40px;
+  }
+  
+  .profile-page {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .profile-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-form {
+    margin-bottom: 40px;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .profile-page .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info {
+    margin-bottom: 16px;
+  }
+  
+  .white-label {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, 0fr)); /* Автоматическое распределение карточек по контейнеру */
+    gap: 28px;
+  }
+
+  .about-user {
+    width: 400px;
+    word-wrap: break-word;
+  }
+  
+  .social-link {
+    word-wrap: break-word;
+    display: block;
+    width: 400px;
+  }

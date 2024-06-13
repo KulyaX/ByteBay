@@ -1,0 +1,62 @@
+  .page-header {
+    margin-bottom: 40px;
+  }
+  
+  .page-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .profile-page {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-form {
+    margin-bottom: 40px;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .profile-page .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .white-label .ant-form-item-label > label {
+    color: #ffffff;
+  }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(274px, 0fr)); /* Автоматическое распределение карточек по контейнеру */
+    gap: 28px;
+  }
+
+  .update-button {
+    margin-bottom: 0;
+  }
+
+  .preview-title {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }

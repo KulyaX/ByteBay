@@ -3,7 +3,7 @@ import { Image } from 'antd';
 
 const Logo = () => {
   return (
-    <Image src="/images/logo.svg" alt="Логотип" width={200} height={50} preview={false} />
+    <Image src="/images/logo.png" alt="Логотип" width={200} height={50} preview={false} />
   );
 };
 

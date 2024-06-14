@@ -19,13 +19,13 @@ const ProductPage = () => {
     // Функция для загрузки данных товара с сервера
     const fetchProduct = async () => {
       try {
-        const responseProduct = await axios.get(`http://localhost:1337/api/products/${id}?populate=*`);
+        const responseProduct = await axios.get(`http://185.250.46.218:1337/api/products/${id}?populate=*`);
         setProduct(responseProduct.data); // Обновляем состояние данных товара
 
-        const responseReviews = await axios.get(`http://localhost:1337/api/reviews?populate=*&filters[product][id]=${id}`);
+        const responseReviews = await axios.get(`http://185.250.46.218:1337/api/reviews?populate=*&filters[product][id]=${id}`);
         setReviews(responseReviews.data.data);
 
-        const responseParams = await axios.get('http://localhost:1337/api/platform-params?populate=*');
+        const responseParams = await axios.get('http://185.250.46.218:1337/api/platform-params?populate=*');
         const params = responseParams.data.data;
         const commission = params.find(param => param.attributes.signature === 'commission');
         setCommissionParam(commission);
@@ -62,7 +62,7 @@ const ProductPage = () => {
   // Преобразование массива объектов параграфов в строку
   const content = product.data.attributes.productDescription.map(paragraph => paragraph.children.map(child => child.text).join(' ')).join('\n\n');
 
-  const baseUrl = 'http://localhost:1337';
+  const baseUrl = 'http://185.250.46.218:1337';
 
   return (
     <div className='page-container'>

@@ -12,7 +12,7 @@ const ProductsSection = () => {
     // Функция для загрузки данных с сервера
   const fetchProductsData = async () => {
     try {
-      const response = await axios.get('http://localhost:1337/api/products?populate=*'); // Выполняем GET-запрос к API
+      const response = await axios.get('http://185.250.46.218:1337/api/products?populate=*'); // Выполняем GET-запрос к API
       setProductsData(response?.data?.data); // Обновляем состояние данных
     } catch (error) {
       console.error('Error fetching products data:', error);
@@ -21,7 +21,7 @@ const ProductsSection = () => {
 
   const fetchParams = async () => {
     try {
-      const responseParams = await axios.get('http://localhost:1337/api/platform-params?populate=*');
+      const responseParams = await axios.get('http://185.250.46.218:1337/api/platform-params?populate=*');
       const params = responseParams.data.data;
       const commission = params.find(param => param.attributes.signature === 'commission');
       setCommissionParam(commission);

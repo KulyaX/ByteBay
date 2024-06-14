@@ -9,7 +9,7 @@ import './UserProfilePage.css';
 const UserProfilePage = () => {
   const [userData, setUserData] = useState(null);
   const [products, setProducts] = useState([]);
-  const baseUrl = 'http://localhost:1337';
+  const baseUrl = 'http://185.250.46.218:1337';
   const defaultAvatarUrl = '/images/default-avatar.png';
   const { id } = useParams(); 
 

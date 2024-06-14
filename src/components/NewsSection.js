@@ -10,7 +10,7 @@ const NewsSection = () => {
 
   const fetchNewsData = async () => {
     try {
-      const response = await axios.get('http://localhost:1337/api/blogs?populate=*');
+      const response = await axios.get('http://185.250.46.218:1337/api/blogs?populate=*');
       setNewsData(response.data.data);
     } catch (error) {
       console.error('Error fetching news data:', error);
@@ -25,7 +25,7 @@ const NewsSection = () => {
     setVisibleNewsCount(visibleNewsCount + 4);
   };
 
-  const baseUrl = 'http://localhost:1337';
+  const baseUrl = 'http://185.250.46.218:1337';
 
   return (
     <div className="news-section">

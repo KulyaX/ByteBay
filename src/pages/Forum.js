@@ -41,11 +41,11 @@ const ForumPage = () => {
     const fetchData = async () => {
       try {
         // Fetch categories
-        const categoriesResponse = await axios.get('http://localhost:1337/api/category-products?populate=*');
+        const categoriesResponse = await axios.get('http://185.250.46.218:1337/api/category-products?populate=*');
         setCategories(categoriesResponse.data.data);
 
         // Fetch topics
-        const topicsResponse = await axios.get('http://localhost:1337/api/topics?populate=*');
+        const topicsResponse = await axios.get('http://185.250.46.218:1337/api/topics?populate=*');
         setTopics(topicsResponse.data.data);
       } catch (error) {
         console.error('Error fetching data:', error);

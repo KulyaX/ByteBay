@@ -21,7 +21,7 @@ const AuthModal = ({ setUserData }) => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:1337/api/auth/local', {
+      const response = await axios.post('http://185.250.46.218:1337/api/auth/local', {
         identifier: email,
         password: password,
       });
@@ -32,7 +32,7 @@ const AuthModal = ({ setUserData }) => {
         message.success('Вы успешно авторизовались!');
         
         // Получение полных данных пользователя с помощью дополнительного запроса
-        const userDataResponse = await axios.get(`http://localhost:1337/api/users/${response.data.user.id}?populate=*`);
+        const userDataResponse = await axios.get(`http://185.250.46.218:1337/api/users/${response.data.user.id}?populate=*`);
         if (userDataResponse.data) {
           console.log('Full user data:', userDataResponse.data);
           
@@ -56,7 +56,7 @@ const AuthModal = ({ setUserData }) => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post('http://localhost:1337/api/auth/local/register', {
+      const response = await axios.post('http://185.250.46.218:1337/api/auth/local/register', {
         username: username,
         email: email,
         password: password,
@@ -68,7 +68,7 @@ const AuthModal = ({ setUserData }) => {
         setVisible(false); // Закрыть модальное окно после успешной регистрации
         message.success('Вы успешно зарегистрировались!');
 
-        const userDataResponse = await axios.get(`http://localhost:1337/api/users/${response.data.user.id}?populate=*`);
+        const userDataResponse = await axios.get(`http://185.250.46.218:1337/api/users/${response.data.user.id}?populate=*`);
         if (userDataResponse.data) {
           console.log('Full user data:', userDataResponse.data);
 

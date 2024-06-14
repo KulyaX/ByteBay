@@ -13,7 +13,7 @@ const NewsPage = () => {
     // Функция для загрузки данных новости с сервера
     const fetchNews = async () => {
       try {
-        const response = await axios.get(`http://localhost:1337/api/blogs/${id}?populate=*`);
+        const response = await axios.get(`http://185.250.46.218:1337/api/blogs/${id}?populate=*`);
         setNews(response.data); // Обновляем состояние данных новости
       } catch (error) {
         console.error('Error fetching news:', error);
@@ -31,7 +31,7 @@ const NewsPage = () => {
   // Преобразование массива объектов параграфов в строку
   const content = news.data.attributes.blogContent.map(paragraph => paragraph.children.map(child => child.text).join(' ')).join('\n\n');
 
-  const baseUrl = 'http://localhost:1337';
+  const baseUrl = 'http://185.250.46.218:1337';
 
   return (
     <div className='page-container'>

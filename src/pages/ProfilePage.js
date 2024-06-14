@@ -13,7 +13,7 @@ const ProfilePage = () => {
   const [avatarFile, setAvatarFile] = useState(null);
   const [avatarPreviewVisible, setAvatarPreviewVisible] = useState(false);
   const [avatarPreviewImage, setAvatarPreviewImage] = useState('');
-  const baseUrl = 'http://localhost:1337';
+  const baseUrl = 'http://185.250.46.218:1337';
   const defaultAvatarUrl = '/images/default-avatar.png';
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const ProfilePage = () => {
       const fetchProducts = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:1337/api/products?populate=*&filters[statePublication][$eq]=true&filters[users_permissions_user][id][$eq]=${userData.id}`
+            `http://185.250.46.218:1337/api/products?populate=*&filters[statePublication][$eq]=true&filters[users_permissions_user][id][$eq]=${userData.id}`
           );
           setProducts(response.data.data);
         } catch (error) {

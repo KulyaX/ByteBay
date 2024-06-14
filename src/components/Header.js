@@ -42,7 +42,7 @@ const HeaderMenu = () => {
   );
   
 
-  const baseUrl = 'http://localhost:1337';
+  const baseUrl = 'http://185.250.46.218:1337';
   const defaultAvatarUrl = '/images/default-avatar.png';
 
   return (

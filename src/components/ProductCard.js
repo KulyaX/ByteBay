@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
 const ProductCard = ({ product, commissionParam }) => {
-  const baseUrl = 'http://localhost:1337';
+  const baseUrl = 'http://185.250.46.218:1337';
   
   return (
     <Link to={`/products/${product.id}`} className="product-card-link">

@@ -10,7 +10,7 @@ const NewsSection = () => {
 
   const fetchNewsData = async () => {
     try {
-      const response = await axios.get('http://185.250.46.218:1337/api/blogs?populate=*');
+      const response = await axios.get('https://backend.bytebay.ru/api/blogs?populate=*');
       setNewsData(response.data.data);
     } catch (error) {
       console.error('Error fetching news data:', error);
@@ -25,7 +25,7 @@ const NewsSection = () => {
     setVisibleNewsCount(visibleNewsCount + 4);
   };
 
-  const baseUrl = 'http://185.250.46.218:1337';
+  const baseUrl = 'https://backend.bytebay.ru';
 
   return (
     <div className="news-section">

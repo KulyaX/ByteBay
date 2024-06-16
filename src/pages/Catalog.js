@@ -85,22 +85,22 @@ const Catalog = () => {
     const fetchData = async () => {
       try {
         // Fetch categories
-        const categoriesResponse = await axios.get('http://185.250.46.218:1337/api/category-products?populate=*');
+        const categoriesResponse = await axios.get('https://backend.bytebay.ru/api/category-products?populate=*');
         setCategories(categoriesResponse.data.data);
 
         // Fetch method uploads
-        const methodUploadsResponse = await axios.get('http://185.250.46.218:1337/api/method-uploads?populate=*');
+        const methodUploadsResponse = await axios.get('https://backend.bytebay.ru/api/method-uploads?populate=*');
         setMethodUploads(methodUploadsResponse.data.data);
 
         // Fetch degree completions
-        const degreeCompletionsResponse = await axios.get('http://185.250.46.218:1337/api/degree-completions?populate=*');
+        const degreeCompletionsResponse = await axios.get('https://backend.bytebay.ru/api/degree-completions?populate=*');
         setDegreeCompletions(degreeCompletionsResponse.data.data);
 
         // Fetch products data
-        const productsResponse = await axios.get('http://185.250.46.218:1337/api/products?populate=*&filters[statePublication][$eq]=true');
+        const productsResponse = await axios.get('https://backend.bytebay.ru/api/products?populate=*&filters[statePublication][$eq]=true');
         setProductsData(productsResponse?.data?.data);
 
-        const responseParams = await axios.get('http://185.250.46.218:1337/api/platform-params?populate=*');
+        const responseParams = await axios.get('https://backend.bytebay.ru/api/platform-params?populate=*');
         const params = responseParams.data.data;
         const commission = params.find(param => param.attributes.signature === 'commission');
         setCommissionParam(commission);

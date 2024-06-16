@@ -42,7 +42,7 @@ const HeaderMenu = () => {
   );
   
 
-  const baseUrl = 'http://185.250.46.218:1337';
+  const baseUrl = 'https://backend.bytebay.ru';
   const defaultAvatarUrl = '/images/default-avatar.png';
 
   return (

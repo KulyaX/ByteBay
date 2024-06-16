@@ -16,10 +16,10 @@ const TopicPage = () => {
   useEffect(() => {
     const fetchTopicAndMessages = async () => {
       try {
-        const topicResponse = await axios.get(`http://185.250.46.218:1337/api/topics/${id}?populate=*`);
+        const topicResponse = await axios.get(`https://backend.bytebay.ru/api/topics/${id}?populate=*`);
         setTopic(topicResponse.data);
 
-        const messagesResponse = await axios.get(`http://185.250.46.218:1337/api/forum-messages?populate=*&filters[topic][id]=${id}`);
+        const messagesResponse = await axios.get(`https://backend.bytebay.ru/api/forum-messages?populate=*&filters[topic][id]=${id}`);
         const sortedMessages = messagesResponse.data.data.sort((a, b) => a.id - b.id);
         setMessages(sortedMessages);
 
@@ -46,7 +46,7 @@ const TopicPage = () => {
       const jwt = localStorage.getItem('jwt');
       const currentDate = new Date().toISOString();
 
-      const response = await axios.post('http://185.250.46.218:1337/api/forum-messages', {
+      const response = await axios.post('https://backend.bytebay.ru/api/forum-messages', {
         data: {
           text_message: newMessage,
           topic: id,

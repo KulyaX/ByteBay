@@ -27,7 +27,7 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
 
   const fetchPlatformParams = async () => {
     try {
-      const response = await axios.get('http://185.250.46.218:1337/api/platform-params?populate=*');
+      const response = await axios.get('https://backend.bytebay.ru/api/platform-params?populate=*');
       const params = response.data.data;
       const commission = params.find(param => param.attributes.signature === 'commission');
       const statusOrder = params.filter(param => param.attributes.signature === 'statusOrder');
@@ -43,7 +43,7 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
 
   const fetchRequisites = async () => {
     try {
-      const response = await axios.get('http://185.250.46.218:1337/api/requisites?populate=*');
+      const response = await axios.get('https://backend.bytebay.ru/api/requisites?populate=*');
       setRequisites(response.data.data);
     } catch (error) {
       console.error('Error fetching requisites:', error);
@@ -71,7 +71,7 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
         }
       };
 
-      const response = await axios.post('http://185.250.46.218:1337/api/orders', newOrder, {
+      const response = await axios.post('https://backend.bytebay.ru/api/orders', newOrder, {
         headers: {
           Authorization: `Bearer ${jwt}`
         }
@@ -95,13 +95,13 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
         }
       };
   
-      const responsePut = await axios.put(`http://185.250.46.218:1337/api/orders/${order.data.id}`, newOrderData, {
+      const responsePut = await axios.put(`https://backend.bytebay.ru/api/orders/${order.data.id}`, newOrderData, {
         headers: {
           Authorization: `Bearer ${jwt}`
         }
       });
 
-      const responseGet = await axios.get(`http://185.250.46.218:1337/api/orders/${order.data.id}?populate=*`);
+      const responseGet = await axios.get(`https://backend.bytebay.ru/api/orders/${order.data.id}?populate=*`);
   
       message.info('Платеж проверяется оператором. Ожидайте...');
       setOrder(responseGet.data);
@@ -114,7 +114,7 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
   
   const handleReloadStatus = async () => {
     try {
-      const response = await axios.get(`http://185.250.46.218:1337/api/orders/${order.data.id}?populate=*`);
+      const response = await axios.get(`https://backend.bytebay.ru/api/orders/${order.data.id}?populate=*`);
       const statusOrder = response.data.data.attributes.platform_params.data.find(param => param.attributes.signature === 'statusOrder');
 
       if (statusOrder.attributes.value === 'paid') {
@@ -122,7 +122,7 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
 
         const newQuantitySales = parseFloat(product.data.attributes.quantitySales) + 1;
 
-        await axios.put(`http://185.250.46.218:1337/api/products/${product.data.id}`, {
+        await axios.put(`https://backend.bytebay.ru/api/products/${product.data.id}`, {
           data: {
             quantitySales: newQuantitySales
           }
@@ -147,7 +147,7 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
 
   const handleCommentSubmit = async () => {
     try {
-      await axios.post('http://185.250.46.218:1337/api/reviews', {
+      await axios.post('https://backend.bytebay.ru/api/reviews', {
         data: {
           product: product.data.id,
           users_permissions_user: userId,
@@ -162,13 +162,13 @@ const PurchaseModal = ({ visible, onClose, product, licenseType, userId }) => {
         }
       });
 
-      const responseReviews = await axios.get(`http://185.250.46.218:1337/api/reviews?filters[product][id]=${product.data.id}`);
+      const responseReviews = await axios.get(`https://backend.bytebay.ru/api/reviews?filters[product][id]=${product.data.id}`);
       const reviews = responseReviews.data.data;
 
       const totalRating = reviews.reduce((sum, review) => sum + review.attributes.estimate, 0);
       const averageRating = totalRating / reviews.length;
 
-      await axios.put(`http://185.250.46.218:1337/api/products/${product.data.id}`, {
+      await axios.put(`https://backend.bytebay.ru/api/products/${product.data.id}`, {
         data: {
           productRate: averageRating
         }

@@ -17,7 +17,7 @@ const FeedbackModal = ({children}) => {
   useEffect(() => {
     const fetchThemes = async () => {
       try {
-        const response = await axios.get('http://185.250.46.218:1337/api/theme-feedbacks');
+        const response = await axios.get('https://backend.bytebay.ru/api/theme-feedbacks');
         setThemes(response.data.data);
       } catch (error) {
         console.error('Failed to fetch themes:', error.message);
@@ -38,7 +38,7 @@ const FeedbackModal = ({children}) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://185.250.46.218:1337/api/feedbacks', {
+      const response = await axios.post('https://backend.bytebay.ru/api/feedbacks', {
         data: {
           email,
           text_feedback,

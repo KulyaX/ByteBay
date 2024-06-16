@@ -63,15 +63,15 @@ const AddProduct = () => {
     const fetchData = async () => {
       try {
         // Fetch categories
-        const categoriesResponse = await axios.get('http://185.250.46.218:1337/api/category-products?populate=*');
+        const categoriesResponse = await axios.get('https://backend.bytebay.ru/api/category-products?populate=*');
         setCategories(categoriesResponse.data.data);
 
         // Fetch method uploads
-        const methodUploadsResponse = await axios.get('http://185.250.46.218:1337/api/method-uploads?populate=*');
+        const methodUploadsResponse = await axios.get('https://backend.bytebay.ru/api/method-uploads?populate=*');
         setMethodUploads(methodUploadsResponse.data.data);
 
         // Fetch degree completions
-        const degreeCompletionsResponse = await axios.get('http://185.250.46.218:1337/api/degree-completions?populate=*');
+        const degreeCompletionsResponse = await axios.get('https://backend.bytebay.ru/api/degree-completions?populate=*');
         setDegreeCompletions(degreeCompletionsResponse.data.data);
 
         // Получаем информацию о пользователе из localStorage
@@ -100,7 +100,7 @@ const AddProduct = () => {
         const formData = new FormData();
         formData.append('files', fileList[i].originFileObj);
   
-        const response = await axios.post('http://185.250.46.218:1337/api/upload', formData, {
+        const response = await axios.post('https://backend.bytebay.ru/api/upload', formData, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -140,7 +140,7 @@ const AddProduct = () => {
         productImage: uploadedImageIds // Добавляем ids загруженных изображений
       };
   
-      const response = await axios.post('http://185.250.46.218:1337/api/products', { data: productData }, {
+      const response = await axios.post('https://backend.bytebay.ru/api/products', { data: productData }, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

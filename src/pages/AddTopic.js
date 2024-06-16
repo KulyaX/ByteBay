@@ -19,7 +19,7 @@ const AddTopic = () => {
     const fetchData = async () => {
       try {
         // Fetch categories
-        const categoriesResponse = await axios.get('http://185.250.46.218:1337/api/category-products?populate=*');
+        const categoriesResponse = await axios.get('https://backend.bytebay.ru/api/category-products?populate=*');
         setCategories(categoriesResponse.data.data);
 
         // Получаем информацию о пользователе из localStorage
@@ -54,7 +54,7 @@ const AddTopic = () => {
         created_date: currentDate
       };
   
-      const response = await axios.post('http://185.250.46.218:1337/api/topics', { data: topicData }, {
+      const response = await axios.post('https://backend.bytebay.ru/api/topics', { data: topicData }, {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
